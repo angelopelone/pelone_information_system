@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Crud Operation</title>
-    <link type="text/css" rel="stylesheet" href="style.css"
+    <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <table>
         <tr>
             <td>
+                <!-- Form for data input -->
                 <form autocomplete="off" onsubmit="onFormSubmit()">
                     <div>
                         <label for="name">Name</label>
@@ -30,25 +32,33 @@
                         <input type="submit" value="Submit">
                     </div>
                 </form>
+            </td>
+            <td>
+                <!-- Search bar with button -->
+                <div>
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button onclick="search()">Search</button>
+                </div>
 
-                <td>
-                    <table class="list" id="storeList">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Age</th>
-                                <th>Address</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
-                </td>
+                <!-- Table to display data -->
+                <table class="list" id="storeList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated dynamically here -->
+                    </tbody>
+                </table>
             </td>
         </tr>
     </table>
+    
+    <!-- JavaScript file -->
     <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
